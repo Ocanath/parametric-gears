@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://thebloughs.net/involute-gear-generation-in-solidworks/ -->
+<html lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width">
+	<title>Accurate Involute Gears in SolidWorks | Tom's Maker Site</title>
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://thebloughs.net/work/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://thebloughs.net/work/wp-content/themes/twentyfourteen/js/html5.js?ver=3.7.0"></script>
+	<![endif]-->
+	<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Tom&#39;s Maker Site » Feed" href="https://thebloughs.net/feed/">
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/thebloughs.net\/work\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.4"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/style.min.css" media="all">
+<style id="wp-block-library-theme-inline-css">
+#start-resizable-editor-section{display:none}.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code{font-family:Menlo,Consolas,monaco,monospace;color:#1e1e1e;padding:.8em 1em;border:1px solid #ddd;border-radius:4px}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-group.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto;opacity:.4}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}#end-resizable-editor-section{display:none}
+</style>
+<link rel="stylesheet" id="orgseries-default-css-css" href="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/orgSeries.css" media="all">
+<link rel="stylesheet" id="twentyfourteen-lato-css" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&amp;subset=latin%2Clatin-ext&amp;display=fallback" media="all">
+<link rel="stylesheet" id="genericons-css" href="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/genericons.css" media="all">
+<link rel="stylesheet" id="twentyfourteen-style-css" href="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/style.css" media="all">
+<link rel="stylesheet" id="twentyfourteen-block-style-css" href="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/blocks.css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='https://thebloughs.net/work/wp-content/themes/twentyfourteen/css/ie.css?ver=20140701' media='all' />
+<![endif]-->
+<script src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/jquery.min.js.download" id="jquery-core-js"></script>
+<script src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/jquery-migrate.min.js.download" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://thebloughs.net/wp-json/"><link rel="alternate" type="application/json" href="https://thebloughs.net/wp-json/wp/v2/posts/2843"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://thebloughs.net/work/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://thebloughs.net/work/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.8.4">
+<link rel="canonical" href="https://thebloughs.net/involute-gear-generation-in-solidworks/">
+<link rel="shortlink" href="https://thebloughs.net/?p=2843">
+<link rel="alternate" type="application/json+oembed" href="https://thebloughs.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthebloughs.net%2Finvolute-gear-generation-in-solidworks%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://thebloughs.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthebloughs.net%2Finvolute-gear-generation-in-solidworks%2F&amp;format=xml">
+<style id="fourteen-colors" type="text/css">/* Custom Contrast Color */
+		.site:before,
+		#secondary,
+		.site-header,
+		.site-footer,
+		.menu-toggle,
+		.featured-content,
+		.featured-content .entry-header,
+		.slider-direction-nav a,
+		.ie8 .featured-content,
+		.ie8 .site:before {
+			background-color: #333333;
+		}
+
+		.grid .featured-content .entry-header,
+		.ie8 .grid .featured-content .entry-header {
+			border-color: #333333;
+		}
+
+		.slider-control-paging a:before {
+			background-color: rgba(255,255,255,.33);
+		}
+
+		.hentry .mejs-mediaelement,
+		.widget .mejs-mediaelement,
+ 		.hentry .mejs-container .mejs-controls,
+ 		.widget .mejs-container .mejs-controls {
+			background: #333333;
+		}
+
+		/* Player controls need separation from the contrast background */
+		.primary-sidebar .mejs-controls,
+		.site-footer .mejs-controls {
+			border: 1px solid;
+		}
+		
+			.content-sidebar .widget_twentyfourteen_ephemera .widget-title:before {
+				background: #333333;
+			}
+
+			.paging-navigation,
+			.content-sidebar .widget .widget-title {
+				border-top-color: #333333;
+			}
+
+			.content-sidebar .widget .widget-title, 
+			.content-sidebar .widget .widget-title a,
+			.paging-navigation,
+			.paging-navigation a:hover,
+			.paging-navigation a {
+				color: #333333;
+			}
+
+			/* Override the site title color option with an over-qualified selector, as the option is hidden. */
+			h1.site-title a {
+				color: #fff;
+			}
+		
+		.menu-toggle:active,
+		.menu-toggle:focus,
+		.menu-toggle:hover {
+			background-color: #777777;
+		}
+		/* Custom accent color. */
+		button,
+		.button,
+		.contributor-posts-link,
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"],
+		.search-toggle,
+		.hentry .mejs-controls .mejs-time-rail .mejs-time-current,
+		.widget .mejs-controls .mejs-time-rail .mejs-time-current,
+		.hentry .mejs-overlay:hover .mejs-overlay-button,
+		.widget .mejs-overlay:hover .mejs-overlay-button,
+		.widget button,
+		.widget .button,
+		.widget input[type="button"],
+		.widget input[type="reset"],
+		.widget input[type="submit"],
+		.widget_calendar tbody a,
+		.content-sidebar .widget input[type="button"],
+		.content-sidebar .widget input[type="reset"],
+		.content-sidebar .widget input[type="submit"],
+		.slider-control-paging .slider-active:before,
+		.slider-control-paging .slider-active:hover:before,
+		.slider-direction-nav a:hover,
+		.ie8 .primary-navigation ul ul,
+		.ie8 .secondary-navigation ul ul,
+		.ie8 .primary-navigation li:hover > a,
+		.ie8 .primary-navigation li.focus > a,
+		.ie8 .secondary-navigation li:hover > a,
+		.ie8 .secondary-navigation li.focus > a {
+			background-color: #010c89;
+		}
+
+		.site-navigation a:hover {
+			color: #010c89;
+		}
+
+		::-moz-selection {
+			background: #010c89;
+		}
+
+		::selection {
+			background: #010c89;
+		}
+
+		.paging-navigation .page-numbers.current {
+			border-color: #010c89;
+		}
+
+		@media screen and (min-width: 782px) {
+			.primary-navigation li:hover > a,
+			.primary-navigation li.focus > a,
+			.primary-navigation ul ul {
+				background-color: #010c89;
+			}
+		}
+
+		@media screen and (min-width: 1008px) {
+			.secondary-navigation li:hover > a,
+			.secondary-navigation li.focus > a,
+			.secondary-navigation ul ul {
+				background-color: #010c89;
+			}
+		}
+	
+			.contributor-posts-link,
+			button,
+			.button,
+			input[type="button"],
+			input[type="reset"],
+			input[type="submit"],
+			.search-toggle:before,
+			.hentry .mejs-overlay:hover .mejs-overlay-button,
+			.widget .mejs-overlay:hover .mejs-overlay-button,
+			.widget button,
+			.widget .button,
+			.widget input[type="button"],
+			.widget input[type="reset"],
+			.widget input[type="submit"],
+			.widget_calendar tbody a,
+			.widget_calendar tbody a:hover,
+			.site-footer .widget_calendar tbody a,
+			.content-sidebar .widget input[type="button"],
+			.content-sidebar .widget input[type="reset"],
+			.content-sidebar .widget input[type="submit"],
+			button:hover,
+			button:focus,
+			.button:hover,
+			.button:focus,
+			.widget a.button:hover,
+			.widget a.button:focus,
+			.widget a.button:active,
+			.content-sidebar .widget a.button,
+			.content-sidebar .widget a.button:hover,
+			.content-sidebar .widget a.button:focus,
+			.content-sidebar .widget a.button:active,
+			.contributor-posts-link:hover,
+			.contributor-posts-link:active,
+			input[type="button"]:hover,
+			input[type="button"]:focus,
+			input[type="reset"]:hover,
+			input[type="reset"]:focus,
+			input[type="submit"]:hover,
+			input[type="submit"]:focus,
+			.slider-direction-nav a:hover:before {
+				color: #fff;
+			}
+
+			@media screen and (min-width: 782px) {
+				.primary-navigation ul ul a,
+				.primary-navigation li:hover > a,
+				.primary-navigation li.focus > a,
+				.primary-navigation ul ul {
+					color: #fff;
+				}
+			}
+
+			@media screen and (min-width: 1008px) {
+				.secondary-navigation ul ul a,
+				.secondary-navigation li:hover > a,
+				.secondary-navigation li.focus > a,
+				.secondary-navigation ul ul {
+					color: #fff;
+				}
+			}
+		
+		/* Generated variants of custom accent color. */
+		a,
+		.content-sidebar .widget a {
+			color: #010c89;
+		}
+
+		.contributor-posts-link:hover,
+		.button:hover,
+		.button:focus,
+		.slider-control-paging a:hover:before,
+		.search-toggle:hover,
+		.search-toggle.active,
+		.search-box,
+		.widget_calendar tbody a:hover,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.widget button:hover,
+		.widget .button:hover,
+		.widget button:focus,
+		.widget .button:focus,
+		.widget input[type="button"]:hover,
+		.widget input[type="button"]:focus,
+		.widget input[type="reset"]:hover,
+		.widget input[type="reset"]:focus,
+		.widget input[type="submit"]:hover,
+		.widget input[type="submit"]:focus,
+		.content-sidebar .widget input[type="button"]:hover,
+		.content-sidebar .widget input[type="button"]:focus,
+		.content-sidebar .widget input[type="reset"]:hover,
+		.content-sidebar .widget input[type="reset"]:focus,
+		.content-sidebar .widget input[type="submit"]:hover,
+		.content-sidebar .widget input[type="submit"]:focus,
+		.ie8 .primary-navigation ul ul a:hover,
+		.ie8 .primary-navigation ul ul li.focus > a,
+		.ie8 .secondary-navigation ul ul a:hover,
+		.ie8 .secondary-navigation ul ul li.focus > a {
+			background-color: #1e29a6;
+		}
+
+		.featured-content a:hover,
+		.featured-content .entry-title a:hover,
+		.widget a:hover,
+		.widget-title a:hover,
+		.widget_twentyfourteen_ephemera .entry-meta a:hover,
+		.hentry .mejs-controls .mejs-button button:hover,
+		.widget .mejs-controls .mejs-button button:hover,
+		.site-info a:hover,
+		.featured-content a:hover {
+			color: #1e29a6;
+		}
+
+		a:active,
+		a:hover,
+		.entry-title a:hover,
+		.entry-meta a:hover,
+		.cat-links a:hover,
+		.entry-content .edit-link a:hover,
+		.post-navigation a:hover,
+		.image-navigation a:hover,
+		.comment-author a:hover,
+		.comment-list .pingback a:hover,
+		.comment-list .trackback a:hover,
+		.comment-metadata a:hover,
+		.comment-reply-title small a:hover,
+		.content-sidebar .widget a:hover,
+		.content-sidebar .widget .widget-title a:hover,
+		.content-sidebar .widget_twentyfourteen_ephemera .entry-meta a:hover {
+			color: #1e29a6;
+		}
+
+		.page-links a:hover,
+		.paging-navigation a:hover {
+			border-color: #1e29a6;
+		}
+
+		.entry-meta .tag-links a:hover:before {
+			border-right-color: #1e29a6;
+		}
+
+		.page-links a:hover,
+		.entry-meta .tag-links a:hover {
+			background-color: #1e29a6;
+		}
+
+		@media screen and (min-width: 782px) {
+			.primary-navigation ul ul a:hover,
+			.primary-navigation ul ul li.focus > a {
+				background-color: #1e29a6;
+			}
+		}
+
+		@media screen and (min-width: 1008px) {
+			.secondary-navigation ul ul a:hover,
+			.secondary-navigation ul ul li.focus > a {
+				background-color: #1e29a6;
+			}
+		}
+
+		button:active,
+		.button:active,
+		.contributor-posts-link:active,
+		input[type="button"]:active,
+		input[type="reset"]:active,
+		input[type="submit"]:active,
+		.widget input[type="button"]:active,
+		.widget input[type="reset"]:active,
+		.widget input[type="submit"]:active,
+		.content-sidebar .widget input[type="button"]:active,
+		.content-sidebar .widget input[type="reset"]:active,
+		.content-sidebar .widget input[type="submit"]:active {
+			background-color: #323dba;
+		}
+
+		.site-navigation .current_page_item > a,
+		.site-navigation .current_page_ancestor > a,
+		.site-navigation .current-menu-item > a,
+		.site-navigation .current-menu-ancestor > a {
+			color: #323dba;
+		}
+	
+		/* Higher contrast Accent Color against contrast color */
+		.site-navigation .current_page_item > a,
+		.site-navigation .current_page_ancestor > a,
+		.site-navigation .current-menu-item > a,
+		.site-navigation .current-menu-ancestor > a,
+		.site-navigation a:hover,
+		.featured-content a:hover,
+		.featured-content .entry-title a:hover,
+		.widget a:hover,
+		.widget-title a:hover,
+		.widget_twentyfourteen_ephemera .entry-meta a:hover,
+		.hentry .mejs-controls .mejs-button button:hover,
+		.widget .mejs-controls .mejs-button button:hover,
+		.site-info a:hover,
+		.featured-content a:hover {
+			color: #6974f1;
+		}
+
+		.hentry .mejs-controls .mejs-time-rail .mejs-time-current,
+		.widget .mejs-controls .mejs-time-rail .mejs-time-current,
+		.slider-control-paging a:hover:before,
+		.slider-control-paging .slider-active:before,
+		.slider-control-paging .slider-active:hover:before {
+			background-color: #6974f1;
+		}
+	</style>		<style type="text/css" id="twentyfourteen-header-css">
+				.site-title,
+		.site-description {
+			clip: rect(1px 1px 1px 1px); /* IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+			position: absolute;
+		}
+				</style>
+		</head>
+
+<body class="post-template-default single single-post postid-2843 single-format-standard wp-embed-responsive group-blog header-image full-width footer-widgets singular masthead-fixed">
+<div id="page" class="hfeed site">
+		<div id="site-header">
+		<a href="https://thebloughs.net/" rel="home">
+			<img src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/cropped-header.jpg" width="1260" height="240" alt="Tom&#39;s Maker Site">
+		</a>
+	</div>
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="https://thebloughs.net/" rel="home">Tom's Maker Site</a></h1>
+
+			<div class="search-toggle">
+				<a href="https://thebloughs.net/involute-gear-generation-in-solidworks/#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">Primary Menu</button>
+				<a class="screen-reader-text skip-link" href="https://thebloughs.net/involute-gear-generation-in-solidworks/#content">Skip to content</a>
+				<div class="menu-main-header-menu-container"><ul id="primary-menu" class="nav-menu"><li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-29"><a href="https://thebloughs.net/">Home</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-31"><a href="https://thebloughs.net/news/">News</a></li>
+<li id="menu-item-223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-223"><a href="https://thebloughs.net/metalworking/">Metalworking</a>
+<ul class="sub-menu">
+	<li id="menu-item-955" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-955"><a href="https://thebloughs.net/series/cut-knurling-tool/">Cut Knurling Tool</a></li>
+	<li id="menu-item-321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-321"><a href="https://thebloughs.net/metalworking/quorn-tool-and-cutter-grinder/">Quorn Tool and Cutter Grinder</a></li>
+	<li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="https://thebloughs.net/metalworking/snow-model-engine/">Snow Model Engine</a></li>
+	<li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317"><a href="https://thebloughs.net/metalworking/hodgson-9-cylinder-radial-engine-2/">Hodgson 9-Cylinder Radial Engine</a></li>
+	<li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-338"><a href="https://thebloughs.net/series/external-hone-2/">External Hone</a></li>
+	<li id="menu-item-346" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-346"><a href="https://thebloughs.net/series/ball-turner-2/">Ball Turner</a></li>
+</ul>
+</li>
+<li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-228"><a href="https://thebloughs.net/electrical/">Electronics</a>
+<ul class="sub-menu">
+	<li id="menu-item-303" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-303"><a href="https://thebloughs.net/series/bike-light-2/">Bike Light</a></li>
+	<li id="menu-item-977" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-977"><a href="https://thebloughs.net/series/ir-ac-timer-2/">IR AC Timer</a></li>
+	<li id="menu-item-302" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-302"><a href="https://thebloughs.net/series/multi-therm-2/">MultiTherm</a></li>
+</ul>
+</li>
+<li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-231"><a href="https://thebloughs.net/hobbies-2/">Hobbies</a>
+<ul class="sub-menu">
+	<li id="menu-item-347" class="menu-item menu-item-type-taxonomy menu-item-object-series menu-item-347"><a href="https://thebloughs.net/series/timberframing-2/">Timberframing</a></li>
+	<li id="menu-item-297" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-297"><a href="https://thebloughs.net/category/automotive/">Automotive</a></li>
+	<li id="menu-item-298" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-298"><a href="https://thebloughs.net/category/hobbies/garden/">Garden</a></li>
+	<li id="menu-item-299" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-299"><a href="https://thebloughs.net/category/woodworking/trees/">Trees</a></li>
+	<li id="menu-item-2302" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2302"><a href="https://thebloughs.net/category/woodworking/">Woodworking</a></li>
+</ul>
+</li>
+</ul></div>			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="https://thebloughs.net/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-2843" class="post-2843 post type-post status-publish format-standard has-post-thumbnail hentry category-solidworks tag-featured">
+
+	
+		<div class="post-thumbnail">
+			<img width="1038" height="576" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/gear-1038x576.jpg" class="attachment-twentyfourteen-full-width size-twentyfourteen-full-width wp-post-image" alt="" loading="lazy" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/gear-1038x576.jpg 1038w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear-672x372.jpg 672w" sizes="(max-width: 1038px) 100vw, 1038px">		</div>
+
+		
+
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://thebloughs.net/category/solidworks/" rel="category tag">SolidWorks</a></span>
+		</div>
+		<h1 class="entry-title">Accurate Involute Gears in SolidWorks</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://thebloughs.net/involute-gear-generation-in-solidworks/" rel="bookmark"><time class="entry-date" datetime="2015-07-02T15:55:59-04:00">July 2, 2015</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://thebloughs.net/author/tom/" rel="author">Tom</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<figure id="attachment_2863" aria-describedby="caption-attachment-2863" style="width: 150px" class="wp-caption alignleft"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/gear.jpg"><img loading="lazy" class="size-thumbnail wp-image-2863" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/gear-150x150.jpg" alt="SolidWorks Gear" width="150" height="150" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/gear-150x150.jpg 150w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear-300x300.jpg 300w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear-1200x1200.jpg 1200w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear.jpg 1600w" sizes="(max-width: 150px) 100vw, 150px"></a><figcaption id="caption-attachment-2863" class="wp-caption-text">SolidWorks Gear</figcaption></figure>
+<p>While there are a lot of shared 3D CAD models on the internet, sometime you really need to know that the model is accurate.&nbsp; The only sure way to do this it to create it yourself.&nbsp; This post will help you create accurate involute gears in SolidWorks.<span id="more-2843"></span></p>
+<p>To accurately generate involute curves in SolidWorks we will be using <em>Equation Driven Curves</em> in our sketches.&nbsp; That means we will be needing some equations, and there are quite a few for involute gears:</p>
+<pre style="font-size: 45%;">"DiametralPitch"= 32
+"NumTeeth"= 16
+"PressureAngle"= 14.5deg
+"Addendum"= 1 / "DiametralPitch"
+"Dedendum"= 1.25 / "DiametralPitch"
+"WorkingDepth"= 2 / "DiametralPitch"
+"WholeDepth"= 2.25 / "DiametralPitch"
+"Clearance"= 0.25 / "DiametralPitch"
+"ToothThickness"= 1.5708 / "DiametralPitch"
+"CircularPitch"= pi / "DiametralPitch"
+"PitchCircle"= "NumTeeth" / "DiametralPitch"
+"OutsideDiameter"= ( "NumTeeth" + 2 ) / "DiametralPitch"
+"Fillet"= "Clearance" * cos ( "PressureAngle" ) * tan ( ( 90 + "PressureAngle" ) / 2 )
+"AddendumCircle"= "PitchCircle" + ( 2 * "Addendum" )
+"DedendumCircle"= "PitchCircle" - ( 2 * "Dedendum" )
+"BaseCircle"= "PitchCircle" * cos ( "PressureAngle" )
+"PitchAngle"= 360deg / "NumTeeth"
+"Alpha"= sqr ( "PitchCircle" ^ 2 - "BaseCircle" ^ 2 ) / "BaseCircle" * 180 / PI - "PressureAngle"
+"Beta"= ( "PitchAngle" / 4 - "Alpha" )
+"Phi"= sqr ( ( "AddendumCircle" / 2 ) ^ 2 - ( "BaseCircle" / 2 ) ^ 2 ) / ( "BaseCircle" / 2 )
+</pre>
+<p>The first three equations: <em>DiametralPitch</em>, <em>NumTeeth</em>, and <em>PressureAngle</em> will vary depending on the particular part and you will need to determine their values before we begin. With the math out of the way, let’s get started.</p>
+<ol>
+<li>Select <em>Tools</em> / <em>Equations…</em></li>
+<li>In the Equation dialog change <em>Angular equation units</em> to <em>Degrees</em></li>
+<li>Enter each of the above equations into the table into the <em>Global</em> category<br>
+<strong>-or-</strong><br>
+<a href="https://thebloughs.net/work/wp-content/uploads/2015/07/gear-equations.txt">download the equations</a> and select <em>Import</em> to add them to the table<br>
+(click the rebuild icon to resolve any errors)<p></p>
+<p></p><figure id="attachment_2852" aria-describedby="caption-attachment-2852" style="width: 150px" class="wp-caption alignnone"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/gear_equation_dialog.jpg"><img loading="lazy" class="size-thumbnail wp-image-2852" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/gear_equation_dialog-150x150.jpg" alt="Gear Equation Dialog" width="150" height="150"></a><figcaption id="caption-attachment-2852" class="wp-caption-text">Gear Equation Dialog</figcaption></figure></li>
+<li>Select <em>OK</em> to exit the dialog</li>
+<li>Select <em>Insert</em> / <em>Boss/Base</em> / <em>Extrude… </em>to create a cylindrical gear blank
+<ol style="list-style-type: lower-alpha;">
+<li>select a plane or face to start the gear</li>
+<li>sketch a circle and dimension the diameter to <em><em>=”OutsideDiameter”</em></em>
+<p></p><figure id="attachment_2853" aria-describedby="caption-attachment-2853" style="width: 150px" class="wp-caption alignnone"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/gear_boss.jpg"><img loading="lazy" class="size-thumbnail wp-image-2853" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/gear_boss-150x150.jpg" alt="Gear Boss Extrude" width="150" height="150" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/gear_boss-150x150.jpg 150w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear_boss-300x300.jpg 300w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear_boss-1200x1200.jpg 1200w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear_boss.jpg 1600w" sizes="(max-width: 150px) 100vw, 150px"></a><figcaption id="caption-attachment-2853" class="wp-caption-text">Gear Boss Extrude</figcaption></figure></li>
+<li>exit the sketch</li>
+<li>extrude boss to the face width of your gear</li>
+<li>select <em>OK</em></li>
+</ol>
+</li>
+<li>Select <em>Insert</em> / <em>Cut</em> / <em>Extrude…</em> to begin the tooth gullet
+<ol style="list-style-type: lower-alpha;">
+<li>select the end face of the cylinder for the starting surface</li>
+<li>Sketch four construction circles concentric with the OD of the boss</li>
+<li>dimension the circles to:<br>
+<em>=”OutsideDiameter”</em><br>
+<em>=”PitchCircle”</em><br>
+<em>=”BaseCircle”</em><br>
+<em>=”DedendumCircle”</em><p></p>
+<p></p><figure id="attachment_2850" aria-describedby="caption-attachment-2850" style="width: 150px" class="wp-caption alignnone"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/gear_construction_circles.jpg"><img loading="lazy" class="size-thumbnail wp-image-2850" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/gear_construction_circles-150x150.jpg" alt="Gear Construction Circles" width="150" height="150" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/gear_construction_circles-150x150.jpg 150w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear_construction_circles-300x300.jpg 300w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear_construction_circles-1200x1200.jpg 1200w, https://thebloughs.net/work/wp-content/uploads/2015/07/gear_construction_circles.jpg 1600w" sizes="(max-width: 150px) 100vw, 150px"></a><figcaption id="caption-attachment-2850" class="wp-caption-text">Gear Construction Circles</figcaption></figure></li>
+</ol>
+</li>
+<li>Create the upper involute curve
+<ol style="list-style-type: lower-alpha;">
+<li>select <em>Tools</em> / <em>Sketch Entities</em> / <em>Equation Driven Curve</em></li>
+<li>choose Parametric</li>
+<li>for Equation <em>x<sub>t</sub></em> enter<br>
+<code>"BaseCircle"/2*(cos(t+"Beta"*pi/180)+t*sin(t+"Beta"*pi/180))</code></li>
+<li>for <em>y<sub>t</sub></em> enter<br>
+<code>"BaseCircle"/2*(sin(t+"Beta"*pi/180)-t*cos(t+"Beta"*pi/180))</code></li>
+<li>set Parameter <em>t<sub>1</sub></em> to <code>0</code></li>
+<li>set Parameter <em>t<sub>2</sub></em> to <code>"Phi"</code>
+<p></p><figure id="attachment_2855" aria-describedby="caption-attachment-2855" style="width: 150px" class="wp-caption alignnone"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/upper_tooth_curve.jpg"><img loading="lazy" class="size-thumbnail wp-image-2855" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/upper_tooth_curve-150x150.jpg" alt="Upper Involute Curve" width="150" height="150" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/upper_tooth_curve-150x150.jpg 150w, https://thebloughs.net/work/wp-content/uploads/2015/07/upper_tooth_curve-300x300.jpg 300w, https://thebloughs.net/work/wp-content/uploads/2015/07/upper_tooth_curve-1200x1200.jpg 1200w, https://thebloughs.net/work/wp-content/uploads/2015/07/upper_tooth_curve.jpg 1600w" sizes="(max-width: 150px) 100vw, 150px"></a><figcaption id="caption-attachment-2855" class="wp-caption-text">Upper Involute Curve</figcaption></figure></li>
+<li>select OK to create the curve</li>
+<li>add a <em>Fix</em> relation to the newly created parametric curve</li>
+</ol>
+</li>
+<li>Create the lower involute curve
+<ol style="list-style-type: lower-alpha;">
+<li>select <em>Tools</em> / <em>Sketch Entities</em> / <em>Equation Driven Curve</em></li>
+<li>choose Parametric</li>
+<li>for Equation <em>x<sub>t</sub></em> enter<br>
+<code>"BaseCircle"/2*(cos(-t-"Beta"*pi/180)-t*sin(-t-"Beta"*pi/180))</code></li>
+<li>for <em>y<sub>t</sub></em> enter<br>
+<code>"BaseCircle"/2*(sin(-t-"Beta"*pi/180)+t*cos(-t-"Beta"*pi/180))</code></li>
+<li>set Parameter <em>t<sub>1</sub></em> to <code>0</code></li>
+<li>set Parameter <em>t<sub>2</sub></em> to <code>"Phi"</code>
+<p></p><figure id="attachment_2858" aria-describedby="caption-attachment-2858" style="width: 150px" class="wp-caption alignnone"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/lower_tooth_curve.jpg"><img loading="lazy" class="size-thumbnail wp-image-2858" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/lower_tooth_curve-150x150.jpg" alt="Lower Involute Curve" width="150" height="150" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/lower_tooth_curve-150x150.jpg 150w, https://thebloughs.net/work/wp-content/uploads/2015/07/lower_tooth_curve-300x300.jpg 300w, https://thebloughs.net/work/wp-content/uploads/2015/07/lower_tooth_curve-1200x1200.jpg 1200w, https://thebloughs.net/work/wp-content/uploads/2015/07/lower_tooth_curve.jpg 1600w" sizes="(max-width: 150px) 100vw, 150px"></a><figcaption id="caption-attachment-2858" class="wp-caption-text">Lower Involute Curve</figcaption></figure></li>
+<li>select OK to create the curve</li>
+<li>add a <em>Fix</em> relation to the newly created parametric curve</li>
+</ol>
+</li>
+<p>&nbsp;<br><strong>Note:  On gears with a large number of teeth, the dedendum circle will sometimes become larger than the base circle.  If this is the case on your gear, skip steps 9 and 10.</strong></p>
+<li>Create the lower portion of the tooth gullet
+<ol style="list-style-type: lower-alpha;">
+<li>add a radial construction line from the dedendum center towards the beginning of the upper involute curve ending at the dedendum circle</li>
+<li>add a line from the end of the previous construction line to the beginning of the upper involute curve</li>
+<li>add a <em>Collinear</em> relation to both lines</li>
+</ol>
+</li>
+<li>Repeat step 9 for the lower involute curve
+<p></p><figure id="attachment_2859" aria-describedby="caption-attachment-2859" style="width: 150px" class="wp-caption alignnone"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/lower_gullet.jpg"><img loading="lazy" class="size-thumbnail wp-image-2859" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/lower_gullet-150x150.jpg" alt="Lower Gullet Portions" width="150" height="150" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/lower_gullet-150x150.jpg 150w, https://thebloughs.net/work/wp-content/uploads/2015/07/lower_gullet-300x300.jpg 300w, https://thebloughs.net/work/wp-content/uploads/2015/07/lower_gullet-1200x1200.jpg 1200w, https://thebloughs.net/work/wp-content/uploads/2015/07/lower_gullet.jpg 1600w" sizes="(max-width: 150px) 100vw, 150px"></a><figcaption id="caption-attachment-2859" class="wp-caption-text">Lower Gullet Portions</figcaption></figure></li>
+<li>Cap the top and bottom of the gullet with arc segments <em>Tangent</em> (SolidWorks seems to have a problem with the <em>Coradial</em> relation in this case) with the dedendum circle (base circle if smaller) and outside diameter</li>
+<li>Exit the sketch</li>
+<li>Select <em>Through All</em> for the extrude cut End Condition and select <em>OK</em> to cut the tooth gullet</li>
+<li>Select<em> Insert</em> / <em>Features</em> / <em>Fillet/Round…</em>
+<ol style="list-style-type: lower-alpha;">
+<li>select <em>Manual</em></li>
+<li>set <em>Constant Size Fillet</em> type</li>
+<li>for Parameters select <em>Symmetric</em> and for <em>Size</em> enter <em>=”Fillet”</em></li>
+<li>select the two edges along the dedendum circle for <em>Items To Fillet</em></li>
+<li>select OK to create the root fillets
+<p></p><figure id="attachment_2861" aria-describedby="caption-attachment-2861" style="width: 150px" class="wp-caption alignnone"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/root_fillets.jpg"><img loading="lazy" class="size-thumbnail wp-image-2861" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/root_fillets-150x150.jpg" alt="Root Fillets" width="150" height="150" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/root_fillets-150x150.jpg 150w, https://thebloughs.net/work/wp-content/uploads/2015/07/root_fillets-300x300.jpg 300w, https://thebloughs.net/work/wp-content/uploads/2015/07/root_fillets-1200x1200.jpg 1200w, https://thebloughs.net/work/wp-content/uploads/2015/07/root_fillets.jpg 1600w" sizes="(max-width: 150px) 100vw, 150px"></a><figcaption id="caption-attachment-2861" class="wp-caption-text">Root Fillets</figcaption></figure></li>
+</ol>
+</li>
+<li>Select the Cut-Extrude and the Fillet features from the feature tree
+<ol style="list-style-type: lower-alpha;">
+<li>then select <em>Insert</em> / <em>Pattern/Mirror</em> / <em>Circular Pattern…</em></li>
+<li>set the <em>Pattern Axis</em> to the cylinder OD face</li>
+<li><em>Angle</em> should be 360°</li>
+<li>for <em>Number of Instances</em> enter <em>=”NumTeeth”</em></li>
+<li>select <em>OK</em> to create the gear teeth
+<p></p><figure id="attachment_2862" aria-describedby="caption-attachment-2862" style="width: 150px" class="wp-caption alignnone"><a href="https://thebloughs.net/work/wp-content/uploads/2015/07/tooth_pattern.jpg"><img loading="lazy" class="size-thumbnail wp-image-2862" src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/tooth_pattern-150x150.jpg" alt="Patterning the Teeth" width="150" height="150" srcset="https://thebloughs.net/work/wp-content/uploads/2015/07/tooth_pattern-150x150.jpg 150w, https://thebloughs.net/work/wp-content/uploads/2015/07/tooth_pattern-300x300.jpg 300w, https://thebloughs.net/work/wp-content/uploads/2015/07/tooth_pattern-1200x1200.jpg 1200w, https://thebloughs.net/work/wp-content/uploads/2015/07/tooth_pattern.jpg 1600w" sizes="(max-width: 150px) 100vw, 150px"></a><figcaption id="caption-attachment-2862" class="wp-caption-text">Patterning the Teeth</figcaption></figure></li>
+</ol>
+</li>
+<li>Add a bore, keyway, setscrews, and hubs or other items to complete your gear</li>
+</ol>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta"><span class="tag-links"><a href="https://thebloughs.net/tag/featured/" rel="tag">featured</a></span></footer></article><!-- #post-## -->
+		<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<a href="https://thebloughs.net/accurate-threads-in-solidworks/" rel="prev"><span class="meta-nav">Previous Post</span>Accurate Threads in SolidWorks</a><a href="https://thebloughs.net/the-backhoe-gets-a-claw/" rel="next"><span class="meta-nav">Next Post</span>The Backhoe gets a Claw</a>			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
+				</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">maker.hacker.engineer</h2>
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://thebloughs.net/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></aside>
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<h1 class="widget-title">Recent Posts</h1><nav role="navigation" aria-label="Recent Posts">
+		<ul>
+											<li>
+					<a href="https://thebloughs.net/welding-edge-clamps/">Welding Edge Clamps</a>
+									</li>
+											<li>
+					<a href="https://thebloughs.net/quorn-part-407-the-spring-box/">Quorn Part 407, The Spring Box</a>
+									</li>
+											<li>
+					<a href="https://thebloughs.net/quorn-parts-401404-the-quill-body-caps/">Quorn Parts 401/404, The Quill Body &amp; Caps</a>
+									</li>
+											<li>
+					<a href="https://thebloughs.net/the-backhoe-gets-a-claw/">The Backhoe gets a Claw</a>
+									</li>
+											<li>
+					<a href="https://thebloughs.net/involute-gear-generation-in-solidworks/" aria-current="page">Accurate Involute Gears in SolidWorks</a>
+									</li>
+					</ul>
+
+		</nav></aside><aside id="latestseries-2" class="widget widget_latestseries"><h1 class="widget-title">Project Series</h1>			<ul>
+				<div class="latest-series"><ul><li><a href="https://thebloughs.net/series/backhoe/" class="series-186" title="Backhoe">Backhoe</a></li><li><a href="https://thebloughs.net/series/ball-turner-2/" class="series-54" title="Ball Turner">Ball Turner</a></li><li><a href="https://thebloughs.net/series/bike-light-2/" class="series-49" title="Bike Light">Bike Light</a></li><li><a href="https://thebloughs.net/series/cut-knurling-tool/" class="series-58" title="Cut Knurling Tool">Cut Knurling Tool</a></li><li><a href="https://thebloughs.net/series/external-hone-2/" class="series-53" title="External Hone">External Hone</a></li><li><a href="https://thebloughs.net/series/hodgson-cam-assembly/" class="series-85" title="Hodgson Cam Assembly">Hodgson Cam Assembly</a></li><li><a href="https://thebloughs.net/series/hodgson-cam-retainer/" class="series-78" title="Hodgson Cam Retainer">Hodgson Cam Retainer</a></li><li><a href="https://thebloughs.net/series/hodgson-crankcase/" class="series-91" title="Hodgson Crankcase">Hodgson Crankcase</a></li><li><a href="https://thebloughs.net/series/hodgson-crankshaft-assembly/" class="series-99" title="Hodgson Crankshaft Assembly">Hodgson Crankshaft Assembly</a></li><li><a href="https://thebloughs.net/series/hodgson-cylinder-heads/" class="series-110" title="Hodgson Cylinder &amp; Heads">Hodgson Cylinder &amp; Heads</a></li><li><a href="https://thebloughs.net/series/hodgson-front-crankcase-cover/" class="series-76" title="Hodgson Front Crankcase Cover">Hodgson Front Crankcase Cover</a></li><li><a href="https://thebloughs.net/series/hodgson-intake-exhaust-pipes/" class="series-122" title="Hodgson Intake &amp; Exhaust Pipes">Hodgson Intake &amp; Exhaust Pipes</a></li><li><a href="https://thebloughs.net/series/hodgson-jackshaft/" class="series-82" title="Hodgson Jackshaft">Hodgson Jackshaft</a></li><li><a href="https://thebloughs.net/series/hodgson-main-bearings/" class="series-88" title="Hodgson Main Bearings">Hodgson Main Bearings</a></li><li><a href="https://thebloughs.net/series/hodgson-oil-pump-assembly/" class="series-132" title="Hodgson Oil Pump Assembly">Hodgson Oil Pump Assembly</a></li><li><a href="https://thebloughs.net/series/hodgson-oil-sump-assembly/" class="series-96" title="Hodgson Oil Sump Assembly">Hodgson Oil Sump Assembly</a></li><li><a href="https://thebloughs.net/series/hodgson-pistons-rings/" class="series-107" title="Hodgson Pistons &amp; Rings">Hodgson Pistons &amp; Rings</a></li><li><a href="https://thebloughs.net/series/hodgson-rear-crankcase-cover/" class="series-144" title="Hodgson Rear Crankcase Cover">Hodgson Rear Crankcase Cover</a></li><li><a href="https://thebloughs.net/series/hodgson-rear-seal-plate/" class="series-139" title="Hodgson Rear Seal Plate">Hodgson Rear Seal Plate</a></li><li><a href="https://thebloughs.net/series/hodgson-rocker-arms/" class="series-118" title="Hodgson Rocker Arms">Hodgson Rocker Arms</a></li><li><a href="https://thebloughs.net/series/hodgson-rods/" class="series-102" title="Hodgson Rods">Hodgson Rods</a></li><li><a href="https://thebloughs.net/series/ir-ac-timer-2/" class="series-57" title="IR AC Timer">IR AC Timer</a></li><li><a href="https://thebloughs.net/series/multi-therm-2/" class="series-50" title="MultiTherm">MultiTherm</a></li><li><a href="https://thebloughs.net/series/quorn-base/" class="series-74" title="Quorn Base">Quorn Base</a></li><li><a href="https://thebloughs.net/series/quorn-quill/" class="series-174" title="Quorn Quill">Quorn Quill</a></li><li><a href="https://thebloughs.net/series/quorn-wheelhead/" class="series-75" title="Quorn Wheelhead">Quorn Wheelhead</a></li><li><a href="https://thebloughs.net/series/raised-beds/" class="series-161" title="Raised Beds">Raised Beds</a></li><li><a href="https://thebloughs.net/series/timberframing-2/" class="series-51" title="Timberframing">Timberframing</a></li></ul></div>			</ul>
+			</aside><aside id="categories-3" class="widget widget_categories"><h1 class="widget-title">Categories</h1><nav role="navigation" aria-label="Categories">
+			<ul>
+					<li class="cat-item cat-item-6"><a href="https://thebloughs.net/category/automotive/">Automotive</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://thebloughs.net/category/electronics/">Electronics</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://thebloughs.net/category/woodworking/furniture/">Furniture</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://thebloughs.net/category/hobbies/garden/">Garden</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://thebloughs.net/category/hobbies/">Hobbies</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://thebloughs.net/category/metalworking/">Metalworking</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://thebloughs.net/category/news/">News</a>
+</li>
+	<li class="cat-item cat-item-170"><a href="https://thebloughs.net/category/solidworks/">SolidWorks</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="https://thebloughs.net/category/woodworking/trees/">Trees</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://thebloughs.net/category/woodworking/">Woodworking</a>
+</li>
+			</ul>
+
+			</nav></aside>	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+<div id="supplementary">
+	<div id="footer-sidebar" class="footer-sidebar widget-area masonry" role="complementary" style="position: relative; height: 575px;">
+		<aside id="archives-2" class="widget widget_archive masonry-brick" style="position: absolute; left: 0px; top: 48px;"><h1 class="widget-title">Archives</h1><nav role="navigation" aria-label="Archives">
+			<ul>
+					<li><a href="https://thebloughs.net/2016/03/">March 2016</a></li>
+	<li><a href="https://thebloughs.net/2015/07/">July 2015</a></li>
+	<li><a href="https://thebloughs.net/2015/06/">June 2015</a></li>
+	<li><a href="https://thebloughs.net/2015/03/">March 2015</a></li>
+	<li><a href="https://thebloughs.net/2015/01/">January 2015</a></li>
+	<li><a href="https://thebloughs.net/2014/12/">December 2014</a></li>
+	<li><a href="https://thebloughs.net/2014/07/">July 2014</a></li>
+	<li><a href="https://thebloughs.net/2014/05/">May 2014</a></li>
+	<li><a href="https://thebloughs.net/2014/04/">April 2014</a></li>
+	<li><a href="https://thebloughs.net/2014/03/">March 2014</a></li>
+	<li><a href="https://thebloughs.net/2014/02/">February 2014</a></li>
+	<li><a href="https://thebloughs.net/2014/01/">January 2014</a></li>
+			</ul>
+
+			</nav></aside><aside id="text-2" class="widget widget_text masonry-brick" style="position: absolute; left: 0px; top: 575px;">			<div class="textwidget"></div>
+		</aside>	</div><!-- #footer-sidebar -->
+</div><!-- #supplementary -->
+
+			<div class="site-info">
+				<p align="center"> Copyright © 2022 Tom Blough</p>
+				<p align="left">Disclaimer and License: All material, including any and all CAD files/SolidWorks drawings, relating to the construction of anything presented on this site is free to use any way you see fit. However, no guarantees are made regarding the accuracy or correctness of the material presented here.</p>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+					<script type="text/javascript"><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) {
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "https://thebloughs.net/series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			<script src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/imagesloaded.min.js.download" id="imagesloaded-js"></script>
+<script src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/masonry.min.js.download" id="masonry-js"></script>
+<script src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/jquery.masonry.min.js.download" id="jquery-masonry-js"></script>
+<script src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/functions.js.download" id="twentyfourteen-script-js"></script>
+<script src="./Accurate Involute Gears in SolidWorks _ Tom&#39;s Maker Site_files/wp-embed.min.js.download" id="wp-embed-js"></script>
+
+</body></html>

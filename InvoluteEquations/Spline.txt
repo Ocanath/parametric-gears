@@ -1,0 +1,32 @@
+RECAP:
+
+TOPMOST:
+---------------------------------------------------------------------
+"cth_r"*"BaseCircle"/2*(cos(t+"Beta"*pi/180)+t*sin(t+"Beta"*pi/180)) - "sth_r"*"BaseCircle"/2*(sin(t+"Beta"*pi/180)-t*cos(t+"Beta"*pi/180))
+"sth_r"*"BaseCircle"/2*(cos(t+"Beta"*pi/180)+t*sin(t+"Beta"*pi/180)) + "cth_r"*"BaseCircle"/2*(sin(t+"Beta"*pi/180)-t*cos(t+"Beta"*pi/180))
+
+SECOND:
+------------------------------------------------------------------------
+"cth_r"* "BaseCircle"/2*(cos(-t-"Beta"*pi/180)-t*sin(-t-"Beta"*pi/180)) - "sth_r"* "BaseCircle"/2*(sin(-t-"Beta"*pi/180)+t*cos(-t-"Beta"*pi/180))
+"sth_r"* "BaseCircle"/2*(cos(-t-"Beta"*pi/180)-t*sin(-t-"Beta"*pi/180)) + "cth_r"* "BaseCircle"/2*(sin(-t-"Beta"*pi/180)+t*cos(-t-"Beta"*pi/180))
+
+
+THIRD:
+"BaseCircle"/2*(cos(t+"Beta"*pi/180)+t*sin(t+"Beta"*pi/180))
+"BaseCircle"/2*(sin(t+"Beta"*pi/180)-t*cos(t+"Beta"*pi/180))
+
+
+FOURTH:
+"BaseCircle"/2*(cos(-t-"Beta"*pi/180)-t*sin(-t-"Beta"*pi/180))
+"BaseCircle"/2*(sin(-t-"Beta"*pi/180)+t*cos(-t-"Beta"*pi/180))
+
+
+
+
+
+These equations, in conjunction with the other text file found in gear-equations.txt,
+define the spline profile of the tooth to be cut away. For an external gear, you need only
+THIRD and FOURTH equations. You may also need to add a cutaway between the spline and the dedendum circle.
+For an Internal gear, you will want to cut the *reverse* profile away. 
+
+You will also need to add the fillet feature, the radius of which is defined in the gear-equations.txt file
